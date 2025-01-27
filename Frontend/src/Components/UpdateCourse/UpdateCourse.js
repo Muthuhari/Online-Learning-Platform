@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { useParams } from "react-router";
 import axios from "axios";
 import './UpdateCourse.css'
+import Contacts from "../Contacts/Contacts";
 
 function UpdateCourse() {
   const [inputs, setInputs] = useState({});
@@ -73,6 +74,7 @@ function UpdateCourse() {
       </div>
       </form>
     </div>
+    <Contacts />
     </div>
   );
 }

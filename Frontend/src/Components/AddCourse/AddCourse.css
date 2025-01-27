@@ -3,6 +3,7 @@
   max-width: 600px;
   margin: 0 auto;
   margin-top: 60px;
+  margin-bottom: 60px;
   padding: 20px;
   background-color:  white;
   border-radius: 8px;
@@ -89,10 +90,14 @@ button:active {
 }
 .button-group {
   display: flex;
-  justify-content: flex-end; /* Align buttons to the right */
-  gap: 8px; /* Add space between buttons */
-  margin-top: 10px; /* Space above the buttons */
+  justify-content: flex-end; 
+  gap: 8px;
+  margin-top: 10px; 
 }
 .submit{
   background-color: #603aa7;
+}
+
+.submit:hover {
+  background-color: #4c2d88 !important; 
 }

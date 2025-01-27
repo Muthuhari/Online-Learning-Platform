@@ -19,7 +19,12 @@
     margin: 0; 
     text-align: right;
   }
-
+.update-button{
+  background-color: #603aa7;
+}
+.update-button:hover {
+  background-color: #4c2d88 !important; 
+}
   .card-text {
     white-space: normal;
     overflow: hidden;

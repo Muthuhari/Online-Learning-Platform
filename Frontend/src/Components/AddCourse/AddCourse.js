@@ -1,6 +1,7 @@
 
 import React,{useState} from "react";
 import Nav from "../Nav/Nav";
+import Contacts from "../Contacts/Contacts";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import './AddCourse.css';
@@ -66,6 +67,7 @@ function AddCourse() {
       </div>
       </form>
       </div>
+      <Contacts />
     </div>
   );
 }

@@ -37,7 +37,7 @@ function Course(props) {
       </div>
 
       <div className="card-footer d-flex justify-content-end">
-        <Link to={`/coursedeatils/${_id}`} className="btn btn-primary">Update</Link>
+        <Link to={`/coursedeatils/${_id}`} className="btn btn-primary update-button">Update</Link>
         <button
           type="button"
           className="btn btn-danger ms-2"
