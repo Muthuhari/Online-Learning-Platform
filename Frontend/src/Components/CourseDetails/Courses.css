@@ -1,0 +1,84 @@
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  h1{
+    margin-top: 50px;
+  }
+  .card {
+    box-shadow: 0 4px 6px rgba(103, 102, 102, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: none;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+.custom-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 200px;
+    transition: all 0.3s ease;
+    background-color: #5a35b1;
+  }
+  
+  .custom-btn:hover {
+    background-color: #5a35b1; 
+    transform: translateY(-3px);
+  }
+  
+  .custom-btn i {
+    font-size: 18px;
+    color: white; 
+  }
+  
+ .custom-btn span {
+    text-align: center;
+    padding-left: 10px; 
+  }
+
+.input-group {
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .input-group-text {
+    border-right: none; 
+    border-radius: 0.375rem 0.375rem 0.375rem 0.375rem;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-control {
+    border-left: none; 
+    border-radius: 0.375rem;
+  }
+  
+  .btn-search {
+    border-radius: 0 0.375rem 0.375rem 0; 
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    background-color: #5a35b1;
+    height: 30px;
+  }
+  
+  .input-group-text:hover,
+  .form-control:focus,
+  .btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 4px rgba(142, 8, 124, 0.5);
+  }
+  

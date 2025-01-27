@@ -1,0 +1,37 @@
+.bg-purple {
+    background-color: #6a1b9a; /* Purple shade for footer */
+  }
+  
+  .footer-logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons a {
+    font-size: 1.5rem; /* Larger size for icons */
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #d1c4e9; /* Lighter shade on hover */
+  }
+  
+  .footer ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .footer ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer ul li a:hover {
+    text-decoration: underline;
+  }
+  .link{
+    align-items: top;
+  }
+  .social{
+    align-items: top;
+  }
