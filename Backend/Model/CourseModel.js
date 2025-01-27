@@ -7,21 +7,17 @@ const userSchema =new Schema({
         type:String,//dataType
         required:true,//validate
     },
-    gmail:{
+    description:{
         type:String,//dataType
         required:true,//validate
     },
-    age:{
+    cost:{
         type:Number,//dataType
         required:true,//validate
     },
-    address:{
-        type:String,//dataType
-        required:true,//validate
-    }
 })
 
 module.exports = mongoose.model(
-    "UserModel",//file name
+    "CourseModel",//file name
     userSchema // function name
 )

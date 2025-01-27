@@ -3,6 +3,7 @@ import Nav from "../Nav/Nav"
 import { useNavigate } from 'react-router-dom'
 import axios from "axios";
 import './Register.css';
+import Contacts from "../Contacts/Contacts";
 
 function Register() {
   
@@ -74,6 +75,7 @@ function Register() {
         </form>
       </div>
     </div>
+    <Contacts/>
     </div>
   )
 }

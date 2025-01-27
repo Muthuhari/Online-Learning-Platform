@@ -15,7 +15,7 @@ const cors =require("cors")
 // muthuharinisansala2
 app.use(express.json());
 app.use(cors());
-app.use("/users",router);
+app.use("/courses",router);
 app.use("/file", express.static("file"))
 mongoose.connect("mongodb+srv://muthuharinisansala2:C3LPWXb9Uz5pruqX@cluster0.eehxy.mongodb.net/")
 .then(()=> console.log("connected to MongoDB"))

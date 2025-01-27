@@ -1,40 +1,40 @@
 
-const User = require("../Model/UserModel");
-const getAllUsers = async (req, res, next) => {
-    let users;
-    //Get all users
+const User = require("../Model/CourseModel");
+const getAllCourse = async (req, res, next) => {
+    let courses;
+    //Get all courses
     try{
-        users =await User.find();
+      courses =await User.find();
     }catch (err) {
         console.log(err);
     }
     //not found
-    if(!users){
+    if(!courses){
         return res.status(404).json({message:"User not found"})
     }
   
-// Disply all users
-return res.status(200).json({ users });
+// Disply all courses
+return res.status(200).json({ courses });
 
 }
 
 //data Insert
-const addUsers = async (req, res, next) => {
+const addCourse = async (req, res, next) => {
 
-    const {name, gmail, age, address} = req.body;
-    let users;
+    const {name, description, cost, address} = req.body;
+    let courses;
 
     try{
-        users = new User({name, gmail, age, address});
-        await users.save();
+      courses = new User({name, description, cost, address});
+        await courses.save();
     }catch (err) {
         console.log(err);
     }
-  // not insert users
-  if(!users){
-    return res.status(404).send({message:"unable to add users"});
+  // not insert courses
+  if(!courses){
+    return res.status(404).send({message:"unable to add courses"});
   }
-  return res.status(200).json({ users });
+  return res.status(200).json({ courses });
 
 }
 
@@ -49,7 +49,7 @@ const getById = async (req, res, next) => {
     }catch (err) {
         console.log(err);
     }
-  // not available users
+  // not available courses
   if(!user){
     return res.status(404).send({message:"user not found"});
   }
@@ -58,24 +58,24 @@ const getById = async (req, res, next) => {
 }
 
 //updateUser details
-const updateUser = async (req, res, next) => {
+const updateCourse = async (req, res, next) => {
     const id = req.params.id;
-    const {name, gmail, age, address} = req.body;
+    const {name, description, cost, address} = req.body;
 
-    let users;
+    let courses;
 
     try{
-      users = await User.findByIdAndUpdate(id,
-        {name:name, gmail:gmail, age:age, address:address});
-         users.save();
+      courses = await User.findByIdAndUpdate(id,
+        {name:name, description:description, cost:cost, address:address});
+        courses.save();
   }catch (err) {
       console.log(err);
   }
-  // not available users
-  if(!users){
+  // not available courses
+  if(!courses){
     return res.status(404).send({message:"Unable to Update User Details"});
   }
-  return res.status(200).json({ users });
+  return res.status(200).json({ courses });
 
 }
 
@@ -90,7 +90,7 @@ const deleteUser = async (req, res, next) => {
 }catch (err) {
     console.log(err);
 }
-// not available users
+// not available courses
 if(!user){
   return res.status(404).send({message:"Unable to Delete User Details"});
 }
@@ -98,9 +98,9 @@ return res.status(200).json({ user });
 
 }
 
-exports.getAllUsers = getAllUsers;
-exports.addUsers = addUsers;
+exports.getAllCourse = getAllCourse;
+exports.addCourse = addCourse;
 exports.getById = getById;
-exports.updateUser = updateUser;
+exports.updateCourse = updateCourse;
 exports.deleteUser = deleteUser;
 

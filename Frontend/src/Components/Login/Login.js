@@ -3,6 +3,7 @@ import Nav from "../Nav/Nav"
 import { useNavigate } from 'react-router-dom'
 import axios from "axios";
 import './Login.css'; 
+import Contacts from "../Contacts/Contacts";
 
 function Login() {
   
@@ -69,6 +70,7 @@ function Login() {
         </form>
       </div>
     </div>
+    <Contacts/>
     </div>
     
   )

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Course1.css";
 import Nav from "../Nav/Nav";
+import Contacts from "../Contacts/Contacts";
 
 function Course1() {
   const [showModal, setShowModal] = useState(false);
@@ -89,6 +90,7 @@ function Course1() {
         </div>
       )}
     </div>
+    <Contacts/>
     </div>
   );
 }

@@ -7,19 +7,19 @@ import './Courses.css';
 import { useReactToPrint } from "react-to-print";
 import { useNavigate } from "react-router-dom";
 
-const URL = "http://localhost:5000/users";
+const URL = "http://localhost:5000/courses";
 
 const fetchHandler = async () => {
   return await axios.get(URL).then((res) => res.data);
 };
 
 function Courses() {
-  const [users, setUsers] = useState();
+  const [courses, setUsers] = useState();
   const componentRef = useRef();  // useRef to create the reference
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchHandler().then((data) => setUsers(data.users));
+    fetchHandler().then((data) => setUsers(data.courses));
   }, []);
 
   const handlePrint = useReactToPrint({
@@ -33,7 +33,7 @@ function Courses() {
   const [noResults, serNoResults] = useState(false);
   const handleSearch =() =>{
     fetchHandler().then((data) =>{
-      const filteredUsers = data.users.filter((user)=>
+      const filteredUsers = data.courses.filter((user)=>
       Object.values(user).some((field)=>
       field.toString().toLowerCase().includes(searchQuery.toLowerCase())
     ))
@@ -99,7 +99,7 @@ function Courses() {
     </div>
   ) : (
     <div ref={componentRef} className="row">
-      {users && users.map((user, i) => (
+      {courses && courses.map((user, i) => (
         <div key={i} className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
           <Course user={user} />
         </div>

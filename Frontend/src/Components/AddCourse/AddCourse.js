@@ -5,15 +5,15 @@ import Contacts from "../Contacts/Contacts";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import './AddCourse.css';
-const URL ="http://localhost:5000/users";
+const URL ="http://localhost:5000/courses";
 
 
 function AddCourse() {
     const history = useNavigate();
     const [inputs, setInputs] = useState ({
         name:"",
-        gmail: "",
-        age:"",
+        description: "",
+        cost:"",
 
     })
 
@@ -33,10 +33,10 @@ function AddCourse() {
 
 
     const sendRequest =async() =>{
-      await axios.post("http://localhost:5000/users",{
+      await axios.post("http://localhost:5000/courses",{
         name: String (inputs.name),
-        gmail: String (inputs.gmail),
-        age: String (inputs.age),
+        description: String (inputs.description),
+        cost: String (inputs.cost),
         address: String (inputs.address),      
       }).then(res => res.data);
     }
@@ -51,10 +51,10 @@ function AddCourse() {
         <input type="text" name="name" onChange={handleChange} value={inputs.name} required></input>
      
         <label>Course Details</label>
-        <textarea type="gmail" name="gmail" onChange={handleChange} value={inputs.gmail} required></textarea>
+        <textarea type="text" name="description" onChange={handleChange} value={inputs.description} required></textarea>
         
         <label>Cost</label>
-        <input type="text" name="age" onChange={handleChange} value={inputs.age} required></input>
+        <input type="text" name="cost" onChange={handleChange} value={inputs.cost} required></input>
         <div className="button-group">
         <button
           type="button"

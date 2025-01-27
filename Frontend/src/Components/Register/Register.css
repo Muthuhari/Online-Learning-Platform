@@ -1,8 +1,7 @@
-/* Background for the entire page */
 body {
-    background-color: #f8f9fa; /* Light gray background */
-    margin: 0; /* Remove any default margin */
-    padding: 0; /* Remove any default padding */
+    background-color: #f8f9fa;
+    margin: 0; 
+    padding: 0; 
 }
 
 .register-page {
@@ -10,25 +9,26 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    height: 600px; /* Full viewport height */
-    background-color: #f8f9fa; /* Optional: Light gray background */
+    margin-bottom: 40px;
+    height: 600px; 
+    background-color: #f8f9fa;
 }
 
-/* Form container styling */
+
 .form-container {
-    width: 100%; /* Optional: Responsive width */
-    max-width: 600px; /* Limit the maximum width */
-    background-color: #ffffff; /* Optional: White background for the form */
-    padding: 30px; /* Add some padding for spacing */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for better focus */
+    width: 100%; 
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0;
 
 }
 
 .form-container h1 {
-    color: #090909; /* Purple color */
-    text-align: center; /* Center the heading */
+    color: #090909;
+    text-align: center;
 }
 
 .form-container label {
@@ -46,7 +46,7 @@ body {
 }
 
 .form-container input:focus {
-    border-color: #6f42c1; /* Highlight the border when the input is focused */
+    border-color: #6f42c1;
 }
 
 .form-container button {
@@ -57,9 +57,9 @@ body {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%; /* Make the button span the width */
+    width: 100%; 
 }
 
 .form-container button:hover {
-    background-color: #5a34b3; /* Darken the button color on hover */
+    background-color: #5a34b3;
 }

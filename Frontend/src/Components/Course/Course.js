@@ -6,12 +6,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Course.css'
 
 function Course(props) {
-  const { _id, name, gmail, age } = props.user;
+  const { _id, name, description, cost } = props.user;
   const navigate = useNavigate();
 
   const deleteHandler = async () => {
     await axios
-      .delete(`http://localhost:5000/users/${_id}`)
+      .delete(`http://localhost:5000/courses/${_id}`)
       .then(res => res.data)
       .then(() => navigate("/"))
       .then(() => navigate("/coursedetails")); 
@@ -30,9 +30,9 @@ function Course(props) {
       </div>
       <div className="card-body">
         <p className="card-text">
-          <strong></strong> {truncateText(gmail, 150)}
+          <strong></strong> {truncateText(description, 150)}
         </p>
-        <p className="card-age"> <strong>$</strong>{age}</p>
+        <p className="card-age"> <strong>$</strong>{cost}</p>
         <p className="course-rating1">Rating: {4.9} <span className="star">★</span></p>
       </div>
 

@@ -14,7 +14,7 @@ function UpdateCourse() {
   useEffect(() => {
     const fetchHandler = async () => {
       await axios
-        .get(`http://localhost:5000/users/${id}`)
+        .get(`http://localhost:5000/courses/${id}`)
         .then((res) => res.data)
         .then((data) => setInputs(data.user));
     };
@@ -22,12 +22,12 @@ function UpdateCourse() {
   }, [id]);
 
   const sendRequest = async () => {
-    const response = await axios.put(`http://localhost:5000/users/${id}`, {
+    const response = await axios.put(`http://localhost:5000/courses/${id}`, {
       name: inputs.name,
-      gmail: inputs.gmail,
-      age: inputs.age,
+      description: inputs.description,
+      cost: inputs.cost,
     });
-    console.log(response.data); // Check if updated user data is returned correctly
+    console.log(response.data); 
   };
 
   const handleChange = (e) => {
@@ -58,10 +58,10 @@ function UpdateCourse() {
         <input type="text" name="name" onChange={handleChange} value={inputs.name || ''} required></input>
      
         <label>Course Details</label>
-        <textarea type="gmail" name="gmail" onChange={handleChange} value={inputs.gmail || ''} required></textarea>
+        <textarea type="text" name="description" onChange={handleChange} value={inputs.description || ''} required></textarea>
         
         <label>Cost</label>
-        <input type="text" name="age" onChange={handleChange} value={inputs.age || ''} required></input>
+        <input type="text" name="cost" onChange={handleChange} value={inputs.cost || ''} required></input>
         <div className="button-group">
         <button
           type="button"
